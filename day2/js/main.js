@@ -230,6 +230,6 @@ if(meals % 2 != 1){
   console.log("plus also you get " + Math.floor(meals / 2) + " free meals"); // B
 }
 
-console.log("the total cost of the meal is $" + (meals * 26.5) + (mushroom * 2));
+console.log("the total cost of the meal is $" + ((meals * 26.5) + (mushroom * 2)));
 
 pageTitle.innerHTML = "this is a calculator that helps you buy heaps of steak"
