@@ -3,13 +3,25 @@
 // homework.html - some kind of interactive conditional navbar -----------------
 // -----------------------------------------------------------------------------
 
+$(document).ready(function(){
 
+  var navOpen = false;
 
-// homework2.html - a button that adds items to an array -----------------------
-// -----------------------------------------------------------------------------
-var myList = [];
+  $("#icon").click(function(){
+    $("#navbar").toggleClass("open");
+    if(navOpen == true){
+      navOpen == false;
+    } else {
+      navOpen == true;
+    }
+    console.log(navOpen);
+  });
 
-$("#btn").click(function(){
-  myList.push(("list item ") + (myList.length + 1));
-  console.log(myList);
-});
+  // why don't you work :(
+
+  $("#circle").click(function(){
+    if(navOpen == true){
+      // do stuff
+    }
+  })
+})
