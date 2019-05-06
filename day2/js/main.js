@@ -218,18 +218,21 @@ pageTitle.innerHTML = "this is a calculator that helps you buy muffins";
 // bonus: mushroom sauce is an extra 2 bucks, but the free steaks don't get sauce
 // get the number of mushroom sauces as another input, and adjust the total
 
-var meals = parseInt(prompt("how many steaks would you like to order?"));
-var mushroom = parseInt(prompt("how many servings of mushroom sauce would you like to order?"));
-
-console.log("okay, that's " + meals + " steaks");
-console.log("also that's " + mushroom + "servings of mushroom sauce");
-
-if(meals % 2 != 1){
-  console.log("plus also you get " + (meals/2) + " free meals"); // A
-} else if (meals % 2 >= 1){
-  console.log("plus also you get " + Math.floor(meals / 2) + " free meals"); // B
-}
-
-console.log("the total cost of the meal is $" + ((meals * 26.5) + (mushroom * 2)));
+// var meals = parseInt(prompt("how many steaks would you like to order?"));
+// var mushroom = parseInt(prompt("how many servings of mushroom sauce would you like to order?"));
+//
+// console.log("okay, that's " + meals + " steaks");
+// console.log("also that's " + mushroom + "servings of mushroom sauce");
+//
+// if(meals % 2 != 1){
+//   console.log("plus also you get " + (meals/2) + " free meals"); // A
+// } else if (meals % 2 >= 1){
+//   console.log("plus also you get " + Math.floor(meals / 2) + " free meals"); // B
+// }
+//
+// console.log("the total cost of the meal is $" + ((meals * 26.5) + (mushroom * 2)));
 
 pageTitle.innerHTML = "this is a calculator that helps you buy heaps of steak"
+
+// Richard's much more beautiful and modular solution:
+// 
