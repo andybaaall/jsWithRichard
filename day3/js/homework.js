@@ -3,25 +3,33 @@
 // homework.html - some kind of interactive conditional navbar -----------------
 // -----------------------------------------------------------------------------
 
+// using Boolean - if the navbar is open (navOpen == true), clicking the circle turns it blue
+// but if the navbar is closed (navOpen == false), clicking the circle turns it red
+
 $(document).ready(function(){
 
   var navOpen = false;
 
   $("#icon").click(function(){
     $("#navbar").toggleClass("open");
-    if(navOpen == true){
-      navOpen == false;
+    if(navOpen == false){
+      navOpen = true;
     } else {
-      navOpen == true;
+    navOpen = false;
     }
     console.log(navOpen);
   });
 
-  // why don't you work :(
-
   $("#circle").click(function(){
     if(navOpen == true){
-      // do stuff
+      $("#circle").click(function(){
+        $("#circle").toggleClass("btn-primary");
+
+        // why do I have to click twice to toggle??? 
+
+      });
+    } else {
+      console.log("navOpen is false");
     }
   })
 })
