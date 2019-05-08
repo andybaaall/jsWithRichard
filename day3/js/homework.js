@@ -5,6 +5,7 @@
 
 // using Boolean - if the navbar is open (navOpen == true), clicking the circle turns it blue
 // but if the navbar is closed (navOpen == false), clicking the circle turns it red
+// but green is a colour of doing something you shouldn't, at least on the internet, so let's go green instead :^)
 
 $(document).ready(function(){
 
@@ -12,24 +13,22 @@ $(document).ready(function(){
 
   $("#icon").click(function(){
     $("#navbar").toggleClass("open");
+
     if(navOpen == false){
       navOpen = true;
-    } else {
-    navOpen = false;
+      // console.log("navOpen = true");
     }
-    console.log(navOpen);
-  });
+    else if(navOpen == true){
+      navOpen = false;
+      // console.log("navOpen = false");
+    }
+  })
 
-  $("#circle").click(function(){
+  $("#btn").click(function(){
     if(navOpen == true){
-      $("#circle").click(function(){
-        $("#circle").toggleClass("btn-primary");
-
-        // why do I have to click twice to toggle??? 
-
-      });
+      $("#btn").toggleClass("btn-success");
     } else {
-      console.log("navOpen is false");
+      $("#btn").toggleClass("btn-primary");
     }
   })
 })
