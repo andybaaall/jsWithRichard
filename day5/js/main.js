@@ -29,12 +29,6 @@ function myFunction(){
 // dynamic list of tasks -------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-
-// Create a site for a shopping list, when you click on a button you will be prompt to input a value. That value should then appear inside of a list on your html.
-// maybe try adding a hide / undo button, also!
-// It should also get added to an array which gets consoled every time you click the button as well
-// what if you did the flowchart first, because you love yourself?
-
 // var days = ["monday" , "tuesday" , "wednesday" , "thursday" , "friday"];
 //
 // function mondayTasks(){

@@ -1,8 +1,8 @@
-function myFunction(){
+// function myFunction(){
   // console.log('foobar');
-}
+// }
 
-myFunction();
+// myFunction();
 // console.log(myOtherFunction(2 , 40));
 
 // local and global scopes -----------------------------------------------------
@@ -10,11 +10,11 @@ myFunction();
 // okay so myFunction() can have two different sets of instructions, in two places, and perform both
 // ... but myOtherFunction can't be invoked in another document
 
+// dynamic to-do list homework -------------------------------------------------
+// -----------------------------------------------------------------------------
 
-// Create a site for a shopping list, when you click on a button you will be prompt to input a value. That value should then appear inside of a list on your html.
-// maybe try adding a hide / undo button, also!
-// It should also get added to an array which gets consoled every time you click the button as well
-// what if you did the flowchart first, because you love yourself?
+//Recreate the project we did on day 4 where we render a list of tasks. The site should ask the user if there are any tasks that need to be done for each of the days of the week.
+//Once it has gone through all of the days, it should then render out on the screen the same way which we did on Tueaday
 
 // Richard gets us started:
 

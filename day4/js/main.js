@@ -89,4 +89,4 @@ function namePrompt(){
   var name = prompt("what's your name?");
   document.getElementById("welcome").innerHTML += "<h4>hello " + name + " welcome to the website</h4>";
 }   // if we want it to iterate, we use the += operator
-    // if we want it to start fresh, we use the + operator 
+    // if we want it to start fresh, we use the + operator
