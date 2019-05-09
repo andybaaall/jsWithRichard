@@ -168,6 +168,8 @@ btn.addEventListener("click" , function(){
 
 // with the loop : it wasn't resetting because you didn't reset anything outside of the loop
 // so on line 157, we're resetting the contents of nameListHTML
+// but the browser remembers how many array items are there ...
+// ... even though they're not rendered on the page
 
 
 
