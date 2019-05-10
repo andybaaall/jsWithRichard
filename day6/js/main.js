@@ -122,41 +122,54 @@
 // a script which finds the largest number in a dynamic array ------------------
 // -----------------------------------------------------------------------------
 
-// var btn = document.getElementById("lagestNumberBtn");
-// var arrayDiv = document.getElementById("arrayDiv");
-// var numberDiv = document.getElementById("numberDiv");
-// var array =[];
-//
-// btn.addEventListener("click", function(){
-//   var item = parseInt(prompt("please feed me a number to pass into an array!"))
-//   if (item){
-//     array.push(item);
-//     arrayDiv.innerHTML = "the array items are now" + array + "<br>";
-//     numberDiv.innerHTML = "the biggest number is now " + (Math.max(... array));
-//   } else {
-//     alert("that's not a number I can do anything with :(")
-//   }
-// });
+var btn = document.getElementById("lagestNumberBtn");
+var arrayDiv = document.getElementById("arrayDiv");
+var numberDiv = document.getElementById("numberDiv");
+var array =[];
 
-// I think that there's a way of doing this with loops and if else, but I don't feel confident looping arrays.
+btn.addEventListener("click", function(){
+  var item = parseInt(prompt("please feed me a number to pass into an array!"))
+  if (item){
+    array.push(item);
+    console.log("the array items are now" + array + "<br>");
+    numberDiv.innerHTML = "the biggest number is now " + (Math.max(... array));
+  } else {
+    alert("that's not a number I can do anything with :(")
+  }
+});
 
+// "the biggest number is now " + (Math.max(... array));
+// that's one way of doing it, but it's possible with a loop and an if / else.
+// (and we'd need to deploy that approach if we weren't dealing with numbers)
+
+let arrayTest = [1 , 2 , 3];
+
+function checkIfGreaterThan(){
+  for (var i = 0; i < arrayTest.length; i++) {
+    if(/* condition */){
+      // do stuff
+    } else {
+      // do other stuff; probably perform a loop?
+    }
+    }
+  }
+}
 
 // a script which lists students' names, one name per prompt  ------------------
 // -----------------------------------------------------------------------------
 
-var nameList = [];
-var nameListHTML = document.getElementById("nameList");
-var btn = document.getElementById("nameBtn");
-
-btn.addEventListener("click" , function(){
-  var name = prompt("enter the name of one of your classmates!");
-  nameList.push(name);
-  nameListHTML.innerHTML = "";
-  for (var i = 0 ; i < nameList.length ; i ++) {
-    nameListHTML.innerHTML += "<li>" + nameList[i] + "</li>";
-  }
-  // console.log(nameList[nameList.length - 1]);
-});
+// var nameList = [];
+// var nameListHTML = document.getElementById("nameList");
+// var btn = document.getElementById("nameBtn");
+//
+// btn.addEventListener("click" , function(){
+//   var name = prompt("enter the name of one of your classmates!");
+//   nameList.push(name);
+//   nameListHTML.innerHTML = "";
+//   for (var i = 0 ; i < nameList.length ; i ++) {
+//     nameListHTML.innerHTML += "<li>" + nameList[i] + "</li>";
+//   }
+// });
 
 // this is how we could do it without the loop
 // nameListHTML.innerHTML += "<li>" + (nameList[nameList.length - 1]) + "</li>";
