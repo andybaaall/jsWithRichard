@@ -70,11 +70,8 @@
 //   }
 // } else {
 //   alert("looks like you haven't input a date in YYYY format! please refresh and try again");
+//   // so if we had the whole thing wrapped in a function, we could invoke the function again here
 // }
-
-// -----------------------------------------------------------------------------
-// a script which checks odd / even  -------------------------------------------
-// -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
 // a script which checks odd / even  -------------------------------------------
@@ -163,14 +160,13 @@ btn.addEventListener("click" , function(){
 
 // this is how we could do it without the loop
 // nameListHTML.innerHTML += "<li>" + (nameList[nameList.length - 1]) + "</li>";
-// thanks, Simon - we don't actually *need* to invoke this array
+// thanks, Simon - we don't actually *need* to reference this array
 // nameListHTML.innerHTML += "<li>" + name + "</li>";
 
 // with the loop : it wasn't resetting because you didn't reset anything outside of the loop
 // so on line 157, we're resetting the contents of nameListHTML
 // but the browser remembers how many array items are there ...
 // ... even though they're not rendered on the page
-
 
 
 // a script which calculates mean from a dynamic array w a button for adding new items
