@@ -126,17 +126,17 @@ var btn = document.getElementById("lagestNumberBtn");
 var arrayDiv = document.getElementById("arrayDiv");
 var numberDiv = document.getElementById("numberDiv");
 var array =[];
-
-btn.addEventListener("click", function(){
-  var item = parseInt(prompt("please feed me a number to pass into an array!"))
-  if (item){
-    array.push(item);
-    console.log("the array items are now" + array + "<br>");
-    numberDiv.innerHTML = "the biggest number is now " + (Math.max(... array));
-  } else {
-    alert("that's not a number I can do anything with :(")
-  }
-});
+//
+// btn.addEventListener("click", function(){
+//   var item = parseInt(prompt("please feed me a number to pass into an array!"))
+//   if (item){
+//     array.push(item);
+//     console.log("the array items are now" + array + "<br>");
+//     numberDiv.innerHTML = "the biggest number is now " + (Math.max(... array));
+//   } else {
+//     alert("that's not a number I can do anything with :(")
+//   }
+// });
 
 // "the biggest number is now " + (Math.max(... array));
 // that's one way of doing it, but it's possible with a loop and an if / else.
@@ -144,16 +144,16 @@ btn.addEventListener("click", function(){
 
 let arrayTest = [1 , 2 , 3];
 
-function checkIfGreaterThan(){
+function findLargest(){
+  var largest = arrayTest[0];
   for (var i = 0; i < arrayTest.length; i++) {
-    if(/* condition */){
-      // do stuff
-    } else {
-      // do other stuff; probably perform a loop?
-    }
+    if(arrayTest[i] > largest){
+      largest = arrayTest[i];
     }
   }
+  console.log(largest);
 }
+// okay, so this works, but why does it work?
 
 // a script which lists students' names, one name per prompt  ------------------
 // -----------------------------------------------------------------------------
