@@ -122,11 +122,40 @@
 // a script which finds the largest number in a dynamic array ------------------
 // -----------------------------------------------------------------------------
 
-var btn = document.getElementById("lagestNumberBtn");
-var arrayDiv = document.getElementById("arrayDiv");
-var numberDiv = document.getElementById("numberDiv");
-var array =[];
-//
+
+// Richard's take
+
+var numbers = [ 1 , 2 , 3 , 4 , 5];
+var largestNumber = 0;
+
+function checkNewNumber(){
+  // console.log('got a click');
+  var newNumber = parseInt(prompt('add a new number to the array'));
+  numbers.push(newNumber);
+  console.log(numbers);
+  if(newNumber > largestNumber){
+    largestNumber = newNumber;
+  }
+  console.log(largestNumber);
+}
+
+for (var i = 0; i < numbers.length; i++) {
+  // console.log(numbers[i]);
+  if(numbers[i]> largestNumber){
+    largestNumber = numbers[i];
+  }
+  // this works, because with every iteration, the largest number has updated
+  // so if the array is [10, 2, 3, 4, 50]
+  // the first iteration's largest number is 10
+  // the second iteration's largest number is 10
+  // the third iteration's largest number is 10
+  // the fourth iteration's largest number is 10
+  // the fifth iteration's largest number is 50
+}
+console.log(largestNumber);
+
+
+
 // btn.addEventListener("click", function(){
 //   var item = parseInt(prompt("please feed me a number to pass into an array!"))
 //   if (item){
@@ -141,19 +170,6 @@ var array =[];
 // "the biggest number is now " + (Math.max(... array));
 // that's one way of doing it, but it's possible with a loop and an if / else.
 // (and we'd need to deploy that approach if we weren't dealing with numbers)
-
-let arrayTest = [1 , 2 , 3];
-
-function findLargest(){
-  var largest = arrayTest[0];
-  for (var i = 0; i < arrayTest.length; i++) {
-    if(arrayTest[i] > largest){
-      largest = arrayTest[i];
-    }
-  }
-  console.log(largest);
-}
-// okay, so this works, but why does it work?
 
 // a script which lists students' names, one name per prompt  ------------------
 // -----------------------------------------------------------------------------
