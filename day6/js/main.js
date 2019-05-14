@@ -193,7 +193,7 @@
 // nameListHTML.innerHTML += "<li>" + name + "</li>";
 
 // with the loop : it wasn't resetting because you didn't reset anything outside of the loop
-// so on line 157, we're resetting the contents of nameListHTML
+// so on line 177, we're resetting the contents of nameListHTML
 // but the browser remembers how many array items are there ...
 // ... even though they're not rendered on the page
 
@@ -201,20 +201,39 @@
 // a script which calculates mean from a dynamic array w a button for adding new items
 // -----------------------------------------------------------------------------
 var meanArray = [];
-var mean;
+var total = 0;
 
 function findMean(){
   var newNumber = parseInt(prompt("enter a number to push into an array"));
   meanArray.push(newNumber);
-  console.log(meanArray);
 
   for (var i = 0; i < meanArray.length; i++) {
-    console.log(meanArray[i] += meanArray[i]);
+    total += meanArray[i++];
+    console.log(meanArray[i]);
+    console.log(meanArray[i++]);
+    console.log(total);
 
-    // mean = meanArray[i] / meanArray.length;
-    // console.log(mean);
   }
+  // console.log(total);
+  // console.log(meanArray.length);
+
+  console.log("the array is now " + meanArray);
+  console.log("the average array item value is " + (total) / meanArray.length);
 }
+
+// is the secret buried in here somewhere? -------------------------------------
+// -----------------------------------------------------------------------------
+// function sumArray(array) {
+//   for (
+//     var
+//       index = 0,              // The iterator
+//       length = array.length,  // Cache the array length
+//       sum = 0;                // The total amount
+//       index < length;         // The "for"-loop condition
+//       sum += array[index++]   // Add number on each iteration
+//   );
+//   return sum;
+// }
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
