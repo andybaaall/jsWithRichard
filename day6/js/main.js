@@ -77,17 +77,20 @@
 // a script which checks odd / even  -------------------------------------------
 // -----------------------------------------------------------------------------
 
-// var number = parseInt(prompt("please enter a whole number!"));
-//
-// if (number){
-//   if ((number % 2) == 0){
-//     alert("oh boy, that's (probably) an even number");
-//   } else {
-//     alert("that's an odd number for sure, probably");
+
+
+// function oddEven(){
+//     var number = parseInt(prompt("please enter a whole number!"));
+//     if (number){
+//     if ((number % 2) == 0){
+//       alert("oh boy, that's (probably) an even number");
+//     } else {
+//       alert("that's an odd number for sure, probably");
+//       }
+//     } else {
+//     alert("that's not a whole number! please refresh & try again");
+//     }
 //   }
-// } else {
-//   alert("that's not a whole number! please refresh & try again");
-// }
 
 // a script which creates a to-do list from a prompt ---------------------------
 // -----------------------------------------------------------------------------
@@ -214,8 +217,8 @@ function findMean(){
     console.log(total);
 
   }
-  // console.log(total);
-  // console.log(meanArray.length);
+  console.log(total);
+  console.log(meanArray.length);
 
   console.log("the array is now " + meanArray);
   console.log("the average array item value is " + (total) / meanArray.length);
