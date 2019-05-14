@@ -125,25 +125,25 @@
 
 // Richard's take
 
-var numbers = [ 1 , 2 , 3 , 4 , 5];
-var largestNumber = 0;
-
-function checkNewNumber(){
-  // console.log('got a click');
-  var newNumber = parseInt(prompt('add a new number to the array'));
-  numbers.push(newNumber);
-  console.log(numbers);
-  if(newNumber > largestNumber){
-    largestNumber = newNumber;
-  }
-  console.log(largestNumber);
-}
-
-for (var i = 0; i < numbers.length; i++) {
-  // console.log(numbers[i]);
-  if(numbers[i]> largestNumber){
-    largestNumber = numbers[i];
-  }
+// var numbers = [ 1 , 2 , 3 , 4 , 5];
+// var largestNumber = 0;
+//
+// function checkNewNumber(){
+//   // console.log('got a click');
+//   var newNumber = parseInt(prompt('add a new number to the array'));
+//   numbers.push(newNumber);
+//   console.log(numbers);
+//   if(newNumber > largestNumber){
+//     largestNumber = newNumber;
+//   }
+//   console.log(largestNumber);
+// }
+//
+// for (var i = 0; i < numbers.length; i++) {
+//   // console.log(numbers[i]);
+//   if(numbers[i]> largestNumber){
+//     largestNumber = numbers[i];
+//   }
   // this works, because with every iteration, the largest number has updated
   // so if the array is [10, 2, 3, 4, 50]
   // the first iteration's largest number is 10
@@ -151,8 +151,8 @@ for (var i = 0; i < numbers.length; i++) {
   // the third iteration's largest number is 10
   // the fourth iteration's largest number is 10
   // the fifth iteration's largest number is 50
-}
-console.log(largestNumber);
+// }
+// console.log(largestNumber);
 
 
 
@@ -200,6 +200,21 @@ console.log(largestNumber);
 
 // a script which calculates mean from a dynamic array w a button for adding new items
 // -----------------------------------------------------------------------------
+var meanArray = [];
+var mean;
+
+function findMean(){
+  var newNumber = parseInt(prompt("enter a number to push into an array"));
+  meanArray.push(newNumber);
+  console.log(meanArray);
+
+  for (var i = 0; i < meanArray.length; i++) {
+    console.log(meanArray[i] += meanArray[i]);
+
+    // mean = meanArray[i] / meanArray.length;
+    // console.log(mean);
+  }
+}
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
