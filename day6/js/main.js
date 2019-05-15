@@ -204,39 +204,18 @@
 // a script which calculates mean from a dynamic array w a button for adding new items
 // -----------------------------------------------------------------------------
 var meanArray = [];
-var total = 0;
 
 function findMean(){
   var newNumber = parseInt(prompt("enter a number to push into an array"));
   meanArray.push(newNumber);
 
+  var total = 0;
   for (var i = 0; i < meanArray.length; i++) {
-    total += meanArray[i++];
-    console.log(meanArray[i]);
-    console.log(meanArray[i++]);
-    console.log(total);
-
+    total += meanArray[i];
   }
-  console.log(total);
-  console.log(meanArray.length);
-
   console.log("the array is now " + meanArray);
-  console.log("the average array item value is " + (total) / meanArray.length);
+  console.log("the average array item value is " + total / meanArray.length);
 }
-
-// is the secret buried in here somewhere? -------------------------------------
-// -----------------------------------------------------------------------------
-// function sumArray(array) {
-//   for (
-//     var
-//       index = 0,              // The iterator
-//       length = array.length,  // Cache the array length
-//       sum = 0;                // The total amount
-//       index < length;         // The "for"-loop condition
-//       sum += array[index++]   // Add number on each iteration
-//   );
-//   return sum;
-// }
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
