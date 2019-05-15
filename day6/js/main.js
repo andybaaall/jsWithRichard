@@ -195,10 +195,15 @@
 // thanks, Simon - we don't actually *need* to reference this array
 // nameListHTML.innerHTML += "<li>" + name + "</li>";
 
-// with the loop : it wasn't resetting because you didn't reset anything outside of the loop
-// so on line 177, we're resetting the contents of nameListHTML
-// but the browser remembers how many array items are there ...
-// ... even though they're not rendered on the page
+// Richard's take:
+
+// var numberOfStudents = parseInt(prompt("how many students?"));
+// var nameListHTML = document.getElementById("nameList");
+//
+// for (var i = 0; i < numberOfStudents; i++) {
+//   var name = prompt("what is student number " + (i + 1) + "\'s name?");
+//   nameListHTML.innerHTML += "<li>" + name + "</li>";
+// }
 
 
 // a script which calculates mean from a dynamic array w a button for adding new items
@@ -220,20 +225,20 @@
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
-var howManyPeople = 0;
-
-function ageCalculator(){
-  howManyPeople = parseInt(prompt("how many people's ages would you like to input?"));
-  var individualAges = [];
-
-  var youngest = 0;
-  var eldest = 0;
-
-  for (var i = 0; i < howManyPeople; i++) {
-    var individualAgesItem = prompt("how old is person" + (i + 1) + "?")
-    individualAges.push(individualAgesItem);
-  }
-}
+// var howManyPeople = 0;
+//
+// function ageCalculator(){
+//   howManyPeople = parseInt(prompt("how many people's ages would you like to input?"));
+//   var individualAges = [];
+//
+//   var youngest = 0;
+//   var eldest = 0;
+//
+//   for (var i = 0; i < howManyPeople; i++) {
+//     var individualAgesItem = prompt("how old is person" + (i + 1) + "?")
+//     individualAges.push(individualAgesItem);
+//   }
+// }
 
 // a script which works as a calculator. First prompt A, second prompt operator, third prompt B
 // -----------------------------------------------------------------------------
