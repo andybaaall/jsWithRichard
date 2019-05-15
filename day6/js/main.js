@@ -203,22 +203,26 @@
 
 // a script which calculates mean from a dynamic array w a button for adding new items
 // -----------------------------------------------------------------------------
-var meanArray = [];
 
-function findMean(){
-  var newNumber = parseInt(prompt("enter a number to push into an array"));
-  meanArray.push(newNumber);
-
-  var total = 0;
-  for (var i = 0; i < meanArray.length; i++) {
-    total += meanArray[i];
-  }
-  console.log("the array is now " + meanArray);
-  console.log("the average array item value is " + total / meanArray.length);
-}
+// var meanArray = [];
+//
+// function findMean(){
+//   var newNumber = parseInt(prompt("enter a number to push into an array"));
+//   meanArray.push(newNumber);
+//
+//   var total = 0;
+//   for (var i = 0; i < meanArray.length; i++) {
+//     total += meanArray[i];
+//   }
+//   console.log("the array is now " + meanArray);
+//   console.log("the average array item value is " + total / meanArray.length);
+// }
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
+
+function ageCalculator(){
+}
 
 // a script which works as a calculator. First prompt A, second prompt operator, third prompt B
 // -----------------------------------------------------------------------------
