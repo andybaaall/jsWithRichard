@@ -220,8 +220,35 @@
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
+var howManyPeople = 0;
 
 function ageCalculator(){
+  howManyPeople = parseInt(prompt("how many people's ages would you like to input?"));
+  var individualAges = [];
+
+  var youngest = 0;
+  var eldest = 0;
+
+  for (var i = 0; i < howManyPeople; i++) {
+    var individualAgesItem = prompt("how old is person" + (i + 1) + "?")
+    individualAges.push(individualAgesItem);
+  }
+
+  var eldest = 0;
+  for (var i = 0; i < individualAges.length; i++) {
+    if (individualAges[i] > eldest) {
+      eldest = individualAges[i];
+    }
+  }
+
+  var youngest = 0;
+  for (var i = 0; i < individualAges.length; i++) {
+    if(youngest < individualAges[i]) {
+      youngest = individualAges[i];
+    }
+  }
+  console.log("the oldest person is " + eldest + " years old");
+  console.log("the youngest person is " + youngest + " years old");
 }
 
 // a script which works as a calculator. First prompt A, second prompt operator, third prompt B
