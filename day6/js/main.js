@@ -263,17 +263,21 @@ function ageCalculator(){
 
   var eldest = 0;
   for (var i = 0; i < individualAges.length; i++) {
+    console.log(individualAges[i]);
     if (individualAges[i] > eldest) {
       eldest = individualAges[i];
     }
   }
 
-  var youngest = 0;
+  var youngest = 1000;
+
   for (var i = 0; i < individualAges.length; i++) {
-    if(youngest < individualAges[i]) {
+    if(individualAges[i] < youngest) {
       youngest = individualAges[i];
     }
-  }
+  } // this is close, but not quite. Maybe write it down with a dummy array?
+    // it keeps preferring more recent young people over eearlier ones ??
+
   console.log("the oldest person is " + eldest + " years old");
   console.log("the youngest person is " + youngest + " years old");
 }
