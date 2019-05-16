@@ -1,5 +1,7 @@
-// a script which checks to see if someone is old enough to buy alcohol --------
-// -----------------------------------------------------------------------------
+// a script which checks to see if someone is old enough to buy alcohol --------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
 
 // checkAge();
 //
@@ -35,9 +37,13 @@
 //
 // though, because JS, we -could- run something like 'if (age.valueOf === Number)'
 
-// -----------------------------------------------------------------------------
-// a script which calculates age based on birth year ---------------------------
-// -----------------------------------------------------------------------------
+
+
+// a script which calculates age based on birth year ---------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
+
 // ageCalculator();
 //
 // function ageCalculator(){
@@ -53,9 +59,12 @@
 // }
 
 
-// -----------------------------------------------------------------------------
-// a script calculates if >18 based on birth year ------------------------------
-// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+// a script calculates if >18 based on birth year ------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
 
 // var birthYear = parseInt(prompt("what's your birth year? YYYY format pls"));
 // var age = 2019 - birthYear;
@@ -73,9 +82,10 @@
 //   // so if we had the whole thing wrapped in a function, we could invoke the function again here
 // }
 
-// -----------------------------------------------------------------------------
-// a script which checks odd / even  -------------------------------------------
-// -----------------------------------------------------------------------------
+
+
+// a script which checks odd / even  -------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -92,8 +102,12 @@
 //     }
 //   }
 
-// a script which creates a to-do list from a prompt ---------------------------
-// -----------------------------------------------------------------------------
+
+
+// a script which creates a to-do list from a prompt ---------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
 
 // var toDoList = document.getElementById("toDoListHTML");
 // var anyTasks = prompt("do you have any tasks to do? if not, just hit <enter>");
@@ -122,8 +136,10 @@
 // }
 
 
-// a script which finds the largest number in a dynamic array ------------------
-// -----------------------------------------------------------------------------
+
+// a script which finds the largest number in a dynamic array ------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
 
 
 // Richard's take
@@ -174,8 +190,12 @@
 // that's one way of doing it, but it's possible with a loop and an if / else.
 // (and we'd need to deploy that approach if we weren't dealing with numbers)
 
-// a script which lists students' names, one name per prompt  ------------------
-// -----------------------------------------------------------------------------
+
+
+// a script which lists students' names, one name per prompt  ------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
 
 // var nameList = [];
 // var nameListHTML = document.getElementById("nameList");
@@ -195,14 +215,19 @@
 // thanks, Simon - we don't actually *need* to reference this array
 // nameListHTML.innerHTML += "<li>" + name + "</li>";
 
-// with the loop : it wasn't resetting because you didn't reset anything outside of the loop
-// so on line 177, we're resetting the contents of nameListHTML
-// but the browser remembers how many array items are there ...
-// ... even though they're not rendered on the page
+// Richard's take:
+
+// var numberOfStudents = parseInt(prompt("how many students?"));
+// var nameListHTML = document.getElementById("nameList");
+//
+// for (var i = 0; i < numberOfStudents; i++) {
+//   var name = prompt("what is student number " + (i + 1) + "\'s name?");
+//   nameListHTML.innerHTML += "<li>" + name + "</li>";
+// }
 
 
 // a script which calculates mean from a dynamic array w a button for adding new items
-// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 // var meanArray = [];
 //
@@ -218,7 +243,10 @@
 //   console.log("the average array item value is " + total / meanArray.length);
 // }
 
+
+
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
+<<<<<<< HEAD
 // -----------------------------------------------------------------------------
 var howManyPeople = 0;
 
@@ -250,9 +278,35 @@ function ageCalculator(){
   console.log("the oldest person is " + eldest + " years old");
   console.log("the youngest person is " + youngest + " years old");
 }
+=======
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// var howManyPeople = 0;
+//
+// function ageCalculator(){
+//   howManyPeople = parseInt(prompt("how many people's ages would you like to input?"));
+//   var individualAges = [];
+//
+//   var youngest = 0;
+//   var eldest = 0;
+//
+//   for (var i = 0; i < howManyPeople; i++) {
+//     var individualAgesItem = prompt("how old is person" + (i + 1) + "?")
+//     individualAges.push(individualAgesItem);
+//   }
+// }
+
+
+
+>>>>>>> 3f01c7ca19181f1d8841814acc8eea5fc5cd2265
 
 // a script which works as a calculator. First prompt A, second prompt operator, third prompt B
-// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 // a password checker which checks if a password has >5 chars, <20 chars, and at least one Number
-// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------
