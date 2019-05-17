@@ -247,43 +247,81 @@
 
 // a script which asks for X no of peoples' ages; shows lowest and highest and calculates mean
 // -----------------------------------------------------------------------------
-var howManyPeople = 0;
+
+
 
 function ageCalculator(){
-  howManyPeople = parseInt(prompt("how many people's ages would you like to input?"));
+  var howManyPeople = parseInt(prompt("how many people's ages would you like to input?"));
   var individualAges = [];
 
-  var youngest = 0;
-  var eldest = 0;
-
   for (var i = 0; i < howManyPeople; i++) {
-    var individualAgesItem = prompt("how old is person" + (i + 1) + "?")
+    var individualAgesItem = parseInt(prompt("how old is person " + (i + 1) + "?"));
     individualAges.push(individualAgesItem);
   }
 
   var eldest = 0;
+
   for (var i = 0; i < individualAges.length; i++) {
-    console.log(individualAges[i]);
     if (individualAges[i] > eldest) {
       eldest = individualAges[i];
     }
   }
 
-  var youngest = 1000;
+  var youngest = eldest + 1;
 
   for (var i = 0; i < individualAges.length; i++) {
-    if(individualAges[i] < youngest) {
+    if (individualAges[i] < youngest) {
       youngest = individualAges[i];
     }
-  } // this is close, but not quite. Maybe write it down with a dummy array?
-    // it keeps preferring more recent young people over eearlier ones ??
+  }
+
+  var total = 0;
+
+  for (var i = 0; i < individualAges.length; i++) {
+    total += individualAges[i];
+  }
+
+  var mean = total / individualAges.length;
 
   console.log("the oldest person is " + eldest + " years old");
   console.log("the youngest person is " + youngest + " years old");
+  console.log("the average age of the group is " + mean + "years old");
 }
+
+
 
 // a script which works as a calculator. First prompt A, second prompt operator, third prompt B
 // -----------------------------------------------------------------------------------------------------------------------------------
+function calculator(){
+  var operand1 = parseInt(prompt("what's the first operator?"));
+
+  var operand2 = parseInt(prompt("what's the second operator?"));
+
+  function getOperator(){
+    var operator = prompt("what's the operator?");
+
+    if(operator === "+"){
+      return operator;
+    } else if operator === "-"){
+      return operator;
+    } else if operator === "-"){
+      return operator;
+    } else if operator === "*"){
+      return operator;
+    } else if operator === "/"){
+      return operator;
+    } else if operator === "%"){
+      return operator;
+    } else {
+      console.log("please enter the operator your want to use: either + , - , * , / or %")
+    }
+  }
+
+  getOperator();
+}
+
+
+
 
 
 
