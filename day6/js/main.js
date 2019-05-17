@@ -292,39 +292,64 @@ function ageCalculator(){
 
 // a script which works as a calculator. First prompt A, second prompt operator, third prompt B
 // -----------------------------------------------------------------------------------------------------------------------------------
+// function calculator(){
+//   var operand1 = parseInt(prompt("what's the first operand?"));
+//   var operand2 = parseInt(prompt("what's the second operand?"));
+//   var operator = prompt("what's the operator?");
+//
+//   function applyOperator(a){
+//     if(a === "+"){
+//       return "the first operand + the second operand = " + (operand1 + operand2) ;
+//     } else if (a === "-"){
+//       return "the first operand - the second operand = " + (operand1 - operand2);
+//     } else if (a === "*"){
+//       return "the first operand * the second operand = " + (operand1 * operand2);
+//     } else if (a === "/"){
+//       return "the first operand / the second operand = " + (operand1 / operand2);
+//     } else if (a === "%"){
+//       return "the first operand % the second operand = " + (operand1 % operand2);
+//     } else {
+//       alert("please enter the operator your want to use: either + , - , * , / or %");
+//     }
+//   }
+//
+//   alert(applyOperator(operator));
+// }
+
+
+// here it is as a condition tree ?
+
 function calculator(){
-  var operand1 = parseInt(prompt("what's the first operator?"));
-
-  var operand2 = parseInt(prompt("what's the second operator?"));
-
-  function getOperator(){
+  var operand1 = parseInt(prompt("what's the first operand?"));
+  if (operand1) {
+  var operand2 = parseInt(prompt("what's the second operand?"));
+  if (operand2) {
     var operator = prompt("what's the operator?");
 
-    if(operator === "+"){
-      return operator;
-    } else if operator === "-"){
-      return operator;
-    } else if operator === "-"){
-      return operator;
-    } else if operator === "*"){
-      return operator;
-    } else if operator === "/"){
-      return operator;
-    } else if operator === "%"){
-      return operator;
-    } else {
-      console.log("please enter the operator your want to use: either + , - , * , / or %")
+    function applyOperator(a){
+      if(a === "+"){
+        return "the first operand + the second operand = " + (operand1 + operand2) ;
+      } else if (a === "-"){
+        return "the first operand - the second operand = " + (operand1 - operand2);
+      } else if (a === "*"){
+        return "the first operand * the second operand = " + (operand1 * operand2);
+      } else if (a === "/"){
+        return "the first operand / the second operand = " + (operand1 / operand2);
+      } else if (a === "%"){
+        return "the first operand % the second operand = " + (operand1 % operand2);
+      }
+      else {
+        alert("please enter the operator your want to use: either + , - , * , / or %");
+      }
     }
+    alert(applyOperator(operator));
+  } else {
+    console.log(" not a number (operand 2)");
   }
-
-  getOperator();
+  } else {
+  console.log("not a number (operand 1)");
+  }
 }
-
-
-
-
-
-
 
 // a password checker which checks if a password has >5 chars, <20 chars, and at least one Number
 // -----------------------------------------------------------------------------------------------------------------------------------
