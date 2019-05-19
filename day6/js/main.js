@@ -268,6 +268,7 @@ function ageCalculator(){
   }
 
   var youngest = eldest + 1;
+  // so Richard went with youngest = ages[0], so that the whole thing could sit in one for loop 
 
   for (var i = 0; i < individualAges.length; i++) {
     if (individualAges[i] < youngest) {
