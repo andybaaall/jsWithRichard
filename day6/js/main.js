@@ -353,3 +353,26 @@ function calculator(){
 
 // a password checker which checks if a password has >5 chars, <20 chars, and at least one Number
 // -----------------------------------------------------------------------------------------------------------------------------------
+
+// a password checker which checks if a password has >5 chars, <20 chars, and at least one Number
+// ------------------------------------------------------------------------------------------------------------------------
+
+function passwordChecker(){
+  var password = prompt("enter a password :^)");
+
+  if (password){
+    if (password.length > 5){
+      if (password.length < 20){
+        // check if we can parseint this bad baby -- if yes, we've got a password
+      } else {
+        alert("password too long");
+        passwordChecker();
+      }
+    } else {
+      alert("password too short");
+      passwordChecker();
+    }
+  } else {
+    passwordChecker();
+  }
+}
