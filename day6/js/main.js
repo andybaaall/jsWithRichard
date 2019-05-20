@@ -3,8 +3,8 @@
 
 
 
-// checkAge();
-//
+checkAge();
+
 // function checkAge(){
 //   var age = parseInt(prompt("how old are you?"));
 //   var yes = "you are old enough to be served intoxicating beverages";
@@ -44,8 +44,8 @@
 
 
 
-// ageCalculator();
-//
+ageCalculator();
+
 // function ageCalculator(){
 //   var birthYear = parseInt(prompt("what's your birth year? YYYY format pls"));
 //   var age = 2019 - birthYear;
@@ -163,13 +163,13 @@
 //   if(numbers[i]> largestNumber){
 //     largestNumber = numbers[i];
 //   }
-  // this works, because with every iteration, the largest number has updated
-  // so if the array is [10, 2, 3, 4, 50]
-  // the first iteration's largest number is 10
-  // the second iteration's largest number is 10
-  // the third iteration's largest number is 10
-  // the fourth iteration's largest number is 10
-  // the fifth iteration's largest number is 50
+//   this works, because with every iteration, the largest number has updated
+//   so if the array is [10, 2, 3, 4, 50]
+//   the first iteration's largest number is 10
+//   the second iteration's largest number is 10
+//   the third iteration's largest number is 10
+//   the fourth iteration's largest number is 10
+//   the fifth iteration's largest number is 50
 // }
 // console.log(largestNumber);
 
@@ -197,51 +197,51 @@
 
 
 
-// var nameList = [];
-// var nameListHTML = document.getElementById("nameList");
-// var btn = document.getElementById("nameBtn");
-//
-// btn.addEventListener("click" , function(){
-//   var name = prompt("enter the name of one of your classmates!");
-//   nameList.push(name);
-//   nameListHTML.innerHTML = "";
-//   for (var i = 0 ; i < nameList.length ; i ++) {
-//     nameListHTML.innerHTML += "<li>" + nameList[i] + "</li>";
-//   }
-// });
+var nameList = [];
+var nameListHTML = document.getElementById("nameList");
+var btn = document.getElementById("nameBtn");
+
+btn.addEventListener("click" , function(){
+  var name = prompt("enter the name of one of your classmates!");
+  nameList.push(name);
+  nameListHTML.innerHTML = "";
+  for (var i = 0 ; i < nameList.length ; i ++) {
+    nameListHTML.innerHTML += "<li>" + nameList[i] + "</li>";
+  }
+});
 
 // this is how we could do it without the loop
 // nameListHTML.innerHTML += "<li>" + (nameList[nameList.length - 1]) + "</li>";
 // thanks, Simon - we don't actually *need* to reference this array
 // nameListHTML.innerHTML += "<li>" + name + "</li>";
-
+//
 // Richard's take:
 
-// var numberOfStudents = parseInt(prompt("how many students?"));
-// var nameListHTML = document.getElementById("nameList");
-//
-// for (var i = 0; i < numberOfStudents; i++) {
-//   var name = prompt("what is student number " + (i + 1) + "\'s name?");
-//   nameListHTML.innerHTML += "<li>" + name + "</li>";
-// }
+var numberOfStudents = parseInt(prompt("how many students?"));
+var nameListHTML = document.getElementById("nameList");
+
+for (var i = 0; i < numberOfStudents; i++) {
+  var name = prompt("what is student number " + (i + 1) + "\'s name?");
+  nameListHTML.innerHTML += "<li>" + name + "</li>";
+}
 
 
 // a script which calculates mean from a dynamic array w a button for adding new items
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-// var meanArray = [];
-//
-// function findMean(){
-//   var newNumber = parseInt(prompt("enter a number to push into an array"));
-//   meanArray.push(newNumber);
-//
-//   var total = 0;
-//   for (var i = 0; i < meanArray.length; i++) {
-//     total += meanArray[i];
-//   }
-//   console.log("the array is now " + meanArray);
-//   console.log("the average array item value is " + total / meanArray.length);
-// }
+var meanArray = [];
+
+function findMean(){
+  var newNumber = parseInt(prompt("enter a number to push into an array"));
+  meanArray.push(newNumber);
+
+  var total = 0;
+  for (var i = 0; i < meanArray.length; i++) {
+    total += meanArray[i];
+  }
+  console.log("the array is now " + meanArray);
+  console.log("the average array item value is " + total / meanArray.length);
+}
 
 
 
@@ -268,7 +268,7 @@ function ageCalculator(){
   }
 
   var youngest = eldest + 1;
-  // so Richard went with youngest = ages[0], so that the whole thing could sit in one for loop 
+  // so Richard went with youngest = ages[0], so that the whole thing could sit in one for loop
 
   for (var i = 0; i < individualAges.length; i++) {
     if (individualAges[i] < youngest) {
@@ -320,37 +320,57 @@ function ageCalculator(){
 
 // here it is as a condition tree ?
 
-function calculator(){
-  var operand1 = parseInt(prompt("what's the first operand?"));
-  if (operand1) {
-  var operand2 = parseInt(prompt("what's the second operand?"));
-  if (operand2) {
-    var operator = prompt("what's the operator?");
+// function calculator(){
+//   var operand1 = parseInt(prompt("what's the first operand?"));
+//   if (operand1) {
+//   var operand2 = parseInt(prompt("what's the second operand?"));
+//   if (operand2) {
+//     var operator = prompt("what's the operator?");
+//
+//     function applyOperator(a){
+//       if(a === "+"){
+//         return "the first operand + the second operand = " + (operand1 + operand2) ;
+//       } else if (a === "-"){
+//         return "the first operand - the second operand = " + (operand1 - operand2);
+//       } else if (a === "*"){
+//         return "the first operand * the second operand = " + (operand1 * operand2);
+//       } else if (a === "/"){
+//         return "the first operand / the second operand = " + (operand1 / operand2);
+//       } else if (a === "%"){
+//         return "the first operand % the second operand = " + (operand1 % operand2);
+//       }
+//       else {
+//         alert("please enter the operator your want to use: either + , - , * , / or %");
+//       }
+//     }
+//     alert(applyOperator(operator));
+//   } else {
+//     console.log(" not a number (operand 2)");
+//   }
+//   } else {
+//   console.log("not a number (operand 1)");
+//   }
+// }
 
-    function applyOperator(a){
-      if(a === "+"){
-        return "the first operand + the second operand = " + (operand1 + operand2) ;
-      } else if (a === "-"){
-        return "the first operand - the second operand = " + (operand1 - operand2);
-      } else if (a === "*"){
-        return "the first operand * the second operand = " + (operand1 * operand2);
-      } else if (a === "/"){
-        return "the first operand / the second operand = " + (operand1 / operand2);
-      } else if (a === "%"){
-        return "the first operand % the second operand = " + (operand1 % operand2);
-      }
-      else {
-        alert("please enter the operator your want to use: either + , - , * , / or %");
-      }
-    }
-    alert(applyOperator(operator));
-  } else {
-    console.log(" not a number (operand 2)");
-  }
-  } else {
-  console.log("not a number (operand 1)");
-  }
-}
+// Richard's take:
+
+var number1 = parseInt(prompt("what's the first number?"));
+var number2 = parseInt(prompt("what's the second number?"));
+
+var math = prompt("would you rather use / , * , + or - ?");
+
+var outcome;
+if (mathOption === "+") {
+  outcome = number1 + number2;
+} else if (mathOption === "-") {
+  outcome = number1 - number2;
+} else if (mathOption === "/") {
+  outcome = number1 / number2;
+} else if (mathOption === "*") {
+  outcome = number1 * number2;
+} else outcome = "some kind of error message";
+
+console.log(outcome);
 
 // a password checker which checks if a password has >5 chars, <20 chars, and at least one Number
 // -----------------------------------------------------------------------------------------------------------------------------------
